@@ -1,6 +1,6 @@
 ---
-title: Scarlett Winters' Resume"
-author: Scarlett Winters
+title: Ziying Chu's Resume"
+author: Nick Strayer
 date: "`r Sys.Date()`"
 output:
   pagedown::html_resume:
@@ -9,6 +9,7 @@ output:
     self_contained: true
 ---
 
+
 ```{r, include=FALSE}
 knitr::opts_chunk$set(
   results='asis', 
@@ -16,8 +17,6 @@ knitr::opts_chunk$set(
 )
 library(tidyverse)
 library(glue)
-library(purrr)
-library(tidyr)
 
 # Set this to true to have links turned into footnotes at the end of the document
 PDF_EXPORT <- FALSE
@@ -31,57 +30,100 @@ source('parsing_functions.R')
 # First let's get the data, filtering to only the items tagged as
 # Resume items
 position_data <- read_csv('positions.csv') %>% 
-  filter(in_resume) 
+  filter(in_resume) %>% 
+  mutate(
+    # Build some custom sections by collapsing others
+    section = case_when(
+      section %in% c('research_positions', 'industry_positions') ~ 'positions', 
+      section %in% c('data_science_writings', 'by_me_press') ~ 'writings',
+      TRUE ~ section
+    )
+  ) 
+
 ```
-
-
 
 
 Aside
 ================================================================================
 
 
+![logo](beta_dist.png){width=100%}
+
 Contact {#contact}
 --------------------------------------------------------------------------------
 
 
 
-- <i class="fa fa-envelope"></i> winters.scarlett.e@gmail.com
-- <i class="fa fa-twitter"></i> ScarData
-- <i class="fa fa-github"></i> github.com/scarlett425
-- <i class="fa fa-phone"></i> (312) 805-9540
+- <i class="fa fa-envelope"></i> ziying.lily.chu@gmail.com
+- <i class="fa fa-twitter"></i> LilyChmao99
+- <i class="fa fa-github"></i> github.com/chmao99
+- <i class="fa fa-phone"></i> (650) 200-0110
 
 
 
-Skills {#skills}
+Language Skills {#skills}
 --------------------------------------------------------------------------------
 
 
-Highly experienced in
+```{r}
+skills <- tribble(
+  ~skill,               ~level,
+   "R",                  4,
+  "Python",             3,
+  "Matlab",             4,
+  "SQL",                3,
+)
+build_skill_bars(skills)
+```
 
 
-- SQL
-- Python
-- Tableau
-- Requirements Analysis
-- Consulting
 
+Open Source Contributions {#open-source}
 --------------------------------------------------------------------------------
+
+All projects available at `github.com/nstrayer/<name>`
+
+
+- `shinysense`: R package to use sensor data in Shiny apps
+- `tuftesque`: Hugo theme (behind LiveFreeOrDichotomize.com)
+- `slid3r`: D3 add-on for fully svg slider inputs
+
+
+More info {#more-info}
+--------------------------------------------------------------------------------
+
+See full CV at nickstrayer.me/cv for more complete list of positions and publications.
+
 
 Disclaimer {#disclaimer}
 --------------------------------------------------------------------------------
 
 Made w/ [**pagedown**](https://github.com/rstudio/pagedown). 
 
-Source code: [github.com/nstrayer/cv](https://github.com/scarlett425/cv).
+Source code: [github.com/nstrayer/cv](https://github.com/nstrayer/cv).
 
 Last updated on `r Sys.Date()`.
+
+
+
 
 Main
 ================================================================================
 
-Scarlett Winters {#title}
+ZIYING CHU {#title}
 --------------------------------------------------------------------------------
+
+```{r}
+intro_text <-  "This is a fictional resume for the purpose of assignment only!
+
+I have dedicated to climate conservation for more than 10 years, and made climate data visualizations and climate change popularization to  hundreds of thousands of people.
+
+Currently searching for a data science position that allows me to build tools using visualization and machine learning to help people explore and understand their data. 
+"
+
+
+cat(sanitize_links(intro_text))
+```
 
 
 
@@ -94,19 +136,19 @@ position_data %>% print_section('education')
 
 
 
-Academic Achievements & Projects {data-icon=suitcase}
+Selected Positions {data-icon=suitcase}
 --------------------------------------------------------------------------------
 
 ```{r}
-position_data %>% print_section('academic_achievements')
+position_data %>% print_section('positions')
 ```
 
-Positions {data-icon=suitcase}
+Selected Writing {data-icon=newspaper}
 --------------------------------------------------------------------------------
 
 
 ```{r}
-position_data %>% print_section('professional_experience')
+position_data %>% print_section('writings')
 ```
 
 
