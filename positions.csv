@@ -9,8 +9,8 @@ industry_positions,TRUE,Project Manager,ecolutions new energy investment company
 industry_positions,TRUE,Civil Servant,Beijing Meteorological Service,"Beijing, China",2010,2018,Built internal tool to help analyze and visualize user interaction with back-end products.,NA,NA
 by_me_press,TRUE,The Evolution of Climate on the Earth,Science Press,"Beijing, China",2016,2016,popular science book ,NA,NA
 by_me_press,TRUE,Abrupt Impacts of Climate Change: Anticipation Surprises,Meteorological Press,"Beijing, China",2017,2017,Chinese translation book ,NA,NA
-by_me_press,TRUE,Abrupt Impacts of Climate Change: Anticipation Surprises,Meteorological Press,"Beijing, China",2017,2017,Chinese translation book ,NA,NA
+by_me_press,FALSE,Abrupt Impacts of Climate Change: Anticipation Surprises,Meteorological Press,"Beijing, China",2017,2017,Chinese translation book ,NA,NA
 academic_articles,TRUE,Implications of Temporal Change in Urban Heat Island Intensity Observed at Beijing and Wuhan Stations,Geophysical Research Letter,N/A,2007,2007,co-author ,NA,NA
 academic_articles,TRUE,Urbanization effects on observed surface air temperature trends in norht China,Journal of Climate,N/A,2008,2008,co-author ,NA,NA
 academic_articles,TRUE,Effect of data homogenization on estimate of temperature trend: a case of Huairou station in Beijing Municipality,Theoretical an Applied Climatology,N/A,2014,2014,co-author ,NA,NA
-academic_articles,TRUE,Effect of data homogenization on estimate of temperature trend: a case of Huairou station in Beijing Municipality,Theoretical an Applied Climatology,N/A,2014,2014,co-author ,NA,NA
+academic_articles,FALSE,Effect of data homogenization on estimate of temperature trend: a case of Huairou station in Beijing Municipality,Theoretical an Applied Climatology,N/A,2014,2014,co-author ,NA,NA
