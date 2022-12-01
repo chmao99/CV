@@ -53,7 +53,7 @@ Aside
 ```{r}
 # When in export mode the little dots are unaligned, so fix that. 
 if(PDF_EXPORT){
-  cat("View this CV online with links at _nickstrayer.me/cv_")
+  cat("View this CV online with links at https://chmao99.github.io/CV/")
 } else {
   cat("[<i class='fas fa-download'></i> Download a PDF of this CV](https://github.com/chmao99/cv/raw/master/strayer_cv.pdf)")
 }
@@ -64,22 +64,27 @@ Contact {#contact}
 
 
 - <i class="fa fa-envelope"></i> ziying.lily.chu@gmail.com
-- <i class="fa fa-twitter"></i> LilyChmao99
 - <i class="fa fa-github"></i> github.com/chmao99
 - <i class="fa fa-phone"></i> (650) 200-0110
 
 
 
-Language Skills {#skills}
+Skills {#skills}
 --------------------------------------------------------------------------------
 
 ```{r}
 skills <- tribble(
-  ~skill,               ~level,
-  "R",                  4,
-  "Python",             3,
-  "Matlab",             4,
-  "SQL",                3,
+  ~skill,                ~level,
+  "Excel/Google Sheets",   5, 
+  "SQL",                   5,
+  "R",                     5,
+  "Matlab",                5,
+  
+  "Regression Analysis",   5,
+  "Time Series Analysis",  5,
+  "Statistical Test",      5, 
+  
+  "Project Management",    5  
   
 )
 
@@ -110,11 +115,9 @@ ZIYING CHU {#title}
 
 
 ```{r}
-intro_text <- "This is a fictional resume for the purpose of assignment only!
+intro_text <- "I was dedicated to climate conservation for more than 10 years, experienced on climate data cleaning, wrangling, analysis, prediction and visualization, and accumlated experiences on project management and leadership.
 
-I have dedicated to climate conservation for more than 10 years, and made climate data visualizations and climate change popularization to  hundreds of thousands of people.
-
-Currently searching for a data science position that allows me to build tools using visualization and machine learning to help people explore and understand their data. 
+Currently I am searching for a data analyst position that allows me to help people explore and understand their data. 
 "
 
 cat(sanitize_links(intro_text))
@@ -144,6 +147,10 @@ print_section(position_data, 'research_positions')
 Industry Experience {data-icon=suitcase}
 --------------------------------------------------------------------------------
 
+::: aside
+I have worked in a variety of roles ranging from research assistant to conservationist to project manager. I like collaborative environments where I can learn from my peers. 
+:::
+
 ```{r}
 print_section(position_data, 'industry_positions')
 ```
@@ -154,20 +161,14 @@ print_section(position_data, 'industry_positions')
 
 
 
-Selected Press (By)  {data-icon=newspaper}
---------------------------------------------------------------------------------
-::: aside
-I have worked in a variety of roles ranging from research assistant to conservationist to data scientist. I like collaborative environments where I can learn from my peers. 
-:::
-
-```{r}
+```{r, include=FALSE}
 print_section(position_data, 'by_me_press')
 ```
 
 
 
 
-Selected Publications, Posters, and Talks {data-icon=book}
+Publications {data-icon=book}
 --------------------------------------------------------------------------------
 
 ```{r}
@@ -176,15 +177,12 @@ print_section(position_data, 'academic_articles')
 
 
 
-```{r}
+```{r, include=FALSE}
 if(PDF_EXPORT){
   cat("
   
 Links {data-icon=link}
 --------------------------------------------------------------------------------
-
-<br>
-
 
 ")
   

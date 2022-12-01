@@ -35,7 +35,7 @@ position_data <- read_csv('positions.csv') %>%
     # Build some custom sections by collapsing others
     section = case_when(
       section %in% c('research_positions', 'industry_positions') ~ 'positions', 
-      section %in% c('data_science_writings', 'by_me_press') ~ 'writings',
+      section %in% c('academic_articles', 'by_me_press') ~ 'writings',
       TRUE ~ section
     )
   ) 
@@ -61,17 +61,24 @@ Contact {#contact}
 
 
 
-Language Skills {#skills}
+Skills {#skills}
 --------------------------------------------------------------------------------
 
 
 ```{r}
-skills <- tribble(
-  ~skill,               ~level,
-   "R",                  4,
-  "Python",             3,
-  "Matlab",             4,
-  "SQL",                3,
+skills <- tribble( 
+~skill,                ~level,
+  "Excel/Google Sheets",   5, 
+  "SQL",                   5,
+  "R",                     5,
+  "Matlab",                5,
+  
+  "Regression Analysis",   5,
+  "Time Series Analysis",  5,
+  "Statistical Test",      5, 
+  
+  "Project Management",    5  
+  
 )
 build_skill_bars(skills)
 ```
@@ -114,11 +121,9 @@ ZIYING CHU {#title}
 --------------------------------------------------------------------------------
 
 ```{r}
-intro_text <-  "This is a fictional resume for the purpose of assignment only!
+intro_text <- "I was dedicated to climate conservation for more than 10 years, experienced on climate data cleaning, wrangling, analysis, prediction and visualization, and accumlated experiences on project management and leadership.
 
-I have dedicated to climate conservation for more than 10 years, and made climate data visualizations and climate change popularization to  hundreds of thousands of people.
-
-Currently searching for a data science position that allows me to build tools using visualization and machine learning to help people explore and understand their data. 
+Currently I am searching for a data analyst position that allows me to help people explore and understand their data. 
 "
 
 
