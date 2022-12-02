@@ -11,8 +11,8 @@ output:
 
 ```{r, include=FALSE}
 knitr::opts_chunk$set(
-  results='asis', 
-  echo = FALSE
+                      results='asis', 
+                      echo = FALSE
 )
 
 library(glue)
@@ -147,10 +147,6 @@ print_section(position_data, 'research_positions')
 Industry Experience {data-icon=suitcase}
 --------------------------------------------------------------------------------
 
-::: aside
-I have worked in a variety of roles ranging from research assistant to conservationist to project manager. I like collaborative environments where I can learn from my peers. 
-:::
-
 ```{r}
 print_section(position_data, 'industry_positions')
 ```
@@ -170,7 +166,9 @@ print_section(position_data, 'by_me_press')
 
 Publications {data-icon=book}
 --------------------------------------------------------------------------------
-
+::: aside
+I have worked in a variety of roles ranging from research assistant to conservationist to project manager. I like collaborative environments where I can learn from my peers. 
+:::
 ```{r}
 print_section(position_data, 'academic_articles')
 ```
