@@ -115,7 +115,7 @@ ZIYING CHU {#title}
 
 
 ```{r}
-intro_text <- "I was dedicated to climate conservation for more than 10 years, experienced on climate data cleaning, wrangling, analysis, prediction and visualization, and accumlated experiences on project management and leadership.
+intro_text <- "I was dedicated to climate conservation for more than 10 years, experienced on climate data cleaning, wrangling, analysis, prediction and visualization, and accumlated some experiences on project management and leadership.
 
 Currently I am searching for a data analyst position that allows me to help people explore and understand their data. 
 "
@@ -156,7 +156,9 @@ print_section(position_data, 'industry_positions')
 <br>
 
 
-
+::: aside
+I have worked in a variety of roles ranging from research assistant to conservationist to project manager. I like collaborative environments where I can learn from my peers. As a continuous learner, I am trying to be a better self everyday .
+:::
 ```{r, include=FALSE}
 print_section(position_data, 'by_me_press')
 ```
@@ -166,9 +168,7 @@ print_section(position_data, 'by_me_press')
 
 Publications {data-icon=book}
 --------------------------------------------------------------------------------
-::: aside
-I have worked in a variety of roles ranging from research assistant to conservationist to project manager. I like collaborative environments where I can learn from my peers. 
-:::
+
 ```{r}
 print_section(position_data, 'academic_articles')
 ```
