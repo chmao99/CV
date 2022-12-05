@@ -84,7 +84,8 @@ skills <- tribble(
   "Time Series Analysis",  5,
   "Statistical Test",      5, 
   
-  "Project Management",    5  
+  "Project Management",    5,
+  "Leadership Experience", 5
   
 )
 
@@ -157,7 +158,7 @@ print_section(position_data, 'industry_positions')
 
 
 ::: aside
-I have worked in a variety of roles ranging from research assistant to conservationist to project manager. I like collaborative environments where I can learn from my peers. As a continuous learner, I am trying to be a better self everyday .
+I have worked in a variety of roles, most of which are relevant to climate data analysis and its application. I love the part of data analysis, which has the magic to change data from vexing chaotic to visual beauty. As a continuous learner, a re-starter with years of gap as a stay-at-home mom, I am multithreading programmed now and expecting to be a better self everyday.
 :::
 ```{r, include=FALSE}
 print_section(position_data, 'by_me_press')
