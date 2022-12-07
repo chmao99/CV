@@ -73,8 +73,8 @@ print_section <- function(position_data, section_id){
       description_bullets = ifelse(
         no_descriptions,
         ' ',
-        map_chr(descriptions, ~paste('-', ., collapse = '\n'))
-      )
+       map_chr(descriptions, ~paste('-', ., collapse = '\n'))
+       )
     ) %>% 
     strip_links_from_cols(c('title', 'description_bullets')) %>% 
     mutate_all(~ifelse(is.na(.), 'N/A', .)) %>% 
@@ -88,7 +88,7 @@ print_section <- function(position_data, section_id){
       "{timeline}", 
       "\n\n",
       "{description_bullets}",
-      "\n\n\n",
+      "\n\n",
     )
 }
 

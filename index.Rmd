@@ -1,12 +1,13 @@
 ---
 title: "Ziying Chu's CV"
-author: Nick Strayer
+author: "Nick Strayer"
 date: "`r Sys.Date()`"
 output:
   pagedown::html_resume:
-    css: ['css/styles.css', 'resume']
-    # set it to true for a self-contained HTML page but it'll take longer to render
-    self_contained: true
+    css:
+    - css/styles.css
+    - resume
+    self_contained: yes
 ---
 
 ```{r, include=FALSE}
@@ -116,15 +117,14 @@ ZIYING CHU {#title}
 
 
 ```{r}
-intro_text <- "I was dedicated to climate conservation for more than 10 years, experienced on climate data cleaning, wrangling, analysis, prediction and visualization, and accumlated some experiences on project management and leadership.
+intro_text <- "I was dedicated to climate conservation for more than 10 years, with 5 years' experience in climate data cleaning, wrangling, statistical analysis, and data visualization using Matlab and 2 years' experience in carbon emission reduction and profitability analysis using Excel, applied mathematical and statistical techniques including clustering, EOF and regression analysis,interpolation, autoregressive integrated moving average, wavelet transform, etc., and accumulated some experiences on project management and leadership.
 
-Currently I am searching for a data analyst position that allows me to help people explore and understand their data. 
+I have been enrolled in a M.S. program on Program Evaluation and Data Analytics in Arizona State University since 2021, it helped me refresh my statistical knowledge especially on hypothesis testing and regression analysis, introduced me new skills on R programming, SQL and Git, and systematize my fragmentary knowledge on project management and evaluation.   
+
+Currently, I am searching for a data analyst position that allows me to help people explore and understand their data. Data Science is a growing industry, I am also learning Python and Machine Learning by myself. Hope all these will contribute to my future position.
 "
-
 cat(sanitize_links(intro_text))
 ```
-
-
 
 Education {data-icon=graduation-cap data-concise=true}
 --------------------------------------------------------------------------------
@@ -158,7 +158,7 @@ print_section(position_data, 'industry_positions')
 
 
 ::: aside
-I have worked in a variety of roles, most of which are relevant to climate data analysis and its application. I love the part of data analysis, which has the magic to change data from vexing chaotic to visual beauty. As a continuous learner, a re-starter with years of gap as a stay-at-home mom, I am multithreading programmed now and expecting to be a better self everyday.
+I have worked in a variety of roles, most of which are relevant to climate data analysis and its application. I love the part of data analysis, which has the magic to change data from vexing chaotic to visual beauty. As a continuous learner, a re-starter with years of gap as a stay-at-home mom, I have been multithreading programmed and expect to be a better person than I was yesterday.
 :::
 ```{r, include=FALSE}
 print_section(position_data, 'by_me_press')
